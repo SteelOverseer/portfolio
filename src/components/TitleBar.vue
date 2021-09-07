@@ -1,22 +1,12 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="white"
-    >
-      <v-app-bar-title id='title'>Douglas Schultz</v-app-bar-title>
-
-      <template v-slot:extension>
-        <v-tabs align-with-title>
-          <v-tab>About</v-tab>
-          <v-tab>Work History</v-tab>
-          <v-tab>Tech</v-tab>
-        </v-tabs>
-      </template>
-
-      <v-spacer></v-spacer>
-
-      <div id='links'>
+  <div id='title'>
+    <div v-tooltip.bottom-center="test">test</div>
+    <div id='actions'>
+      <h1>About</h1>
+      <h1>Work History</h1>
+      <h1>Technologies</h1>
+    </div>
+    <div id='links'>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=douglasschultz1@gmail.com" target='_blank'>
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
@@ -53,7 +43,7 @@
           </span>
         </v-tooltip>
       </a>
-      <a href='https://github.com/SteelOverseer/portfolio' target='_blank'>
+      <a href='https://github.com/SteelOverseer' target='_blank'>
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-icon
@@ -72,36 +62,52 @@
         </v-tooltip>
       </a>
     </div>
-    </v-app-bar>
-
-    <v-main>
-      <HomePage/>
-    </v-main>
-  </v-app>
+  </div>
 </template>
 
 <script>
-import HomePage from './components/HomePage';
-
 export default {
-  name: 'App',
-
-  components: {
-    HomePage,
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  name: 'TitleBar'
+}
 </script>
 
-<style lang="scss">
-  .v-app-bar-title__content {
-    width: 200px !important;
-  }
+<style lang="scss" scoped>
+  #title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid blue;
 
-  .v-application a {
-    color: white;
+    h1 {
+      color: black;
+    }
+
+    #actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // flex-grow: 1;
+    }
+
+    #links {
+      a {
+        height: 100%;
+        width: 100%;
+      }
+
+      #email {
+        margin-right: 10px;
+      }
+
+      #linkedin {
+        margin-right: 10px;
+        color: blue;
+      }
+      
+      #github {
+        color: black;
+      }
+    }
   }
 </style>
