@@ -1,93 +1,22 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="white"
-    >
-      <v-app-bar-title id='title'>Douglas Schultz</v-app-bar-title>
-
-      <template v-slot:extension>
-        <v-tabs align-with-title>
-          <v-tab>About</v-tab>
-          <v-tab>Work History</v-tab>
-          <v-tab>Tech</v-tab>
-        </v-tabs>
-      </template>
-
-      <v-spacer></v-spacer>
-
-      <div id='links'>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=douglasschultz1@gmail.com" target='_blank'>
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-icon
-              id='email'
-              large
-              color="red darken-3"
-              v-bind="attrs"
-              v-on="on"
-            >
-              mdi-email-outline
-            </v-icon>
-          </template>
-          <span>
-            E-mail
-          </span>
-        </v-tooltip>
-      </a>
-      <a href="https://www.linkedin.com/in/douglas-schultz-7a9819a7/" target='_blank'>
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-icon
-              id='email'
-              large
-              color="blue darken-3"
-              v-bind="attrs"
-              v-on="on"
-            >
-              mdi-linkedin
-            </v-icon>
-          </template>
-          <span>
-            LinkedIn
-          </span>
-        </v-tooltip>
-      </a>
-      <a href='https://github.com/SteelOverseer/portfolio' target='_blank'>
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-icon
-              id='email'
-              large
-              color="black darken-3"
-              v-bind="attrs"
-              v-on="on"
-            >
-              mdi-github
-            </v-icon>
-          </template>
-          <span>
-            Github
-          </span>
-        </v-tooltip>
-      </a>
-    </div>
-    </v-app-bar>
-
+    <title-bar />
     <v-main>
-      <HomePage/>
+      <router-view></router-view>
+      <div>Favicon made by <a href="" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HomePage from './components/HomePage';
+// import HomePage from './components/HomePage';
+import TitleBar from './components/TitleBar.vue'
 
 export default {
   name: 'App',
 
   components: {
-    HomePage,
+    TitleBar,
   },
 
   data: () => ({
@@ -99,9 +28,5 @@ export default {
 <style lang="scss">
   .v-app-bar-title__content {
     width: 200px !important;
-  }
-
-  .v-application a {
-    color: white;
-  }
+  }  
 </style>
