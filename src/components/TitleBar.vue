@@ -9,7 +9,6 @@
         <v-tabs centered>
           <v-tab to='About'>About</v-tab>
           <v-tab to='WorkHistory'>Work History</v-tab>
-          <v-tab>Tech</v-tab>
         </v-tabs>
       </template>
 
@@ -25,7 +24,6 @@
                 color="red darken-3"
                 v-bind="attrs"
                 v-on="on"
-                @click="sendEmail"
               >
                 mdi-email-outline
               </v-icon>
@@ -78,56 +76,13 @@
 <script>
 export default {
   name: 'TitleBar',
-  methods: {
-    sendEmail: function() {
-      let routeData = this.$router.resolve({name: 'https://www.linkedin.com/in/douglas-schultz-7a9819a7/'});
-      window.open(routeData.href, '_blank');
-    }
-  } 
 }
 </script>
 
 <style lang="scss" scoped>
   #links {
-    .v-application a{
+    a {
       color: white
     }
   }
-  // #title {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-around;
-  //   align-items: center;
-
-  //   h1 {
-  //     color: black;
-  //   }
-
-  //   #actions {
-  //     display: flex;
-  //     flex-direction: row;
-  //     justify-content: space-between;
-  //     // flex-grow: 1;
-  //   }
-
-  //   #links {
-  //     a {
-  //       height: 100%;
-  //       width: 100%;
-  //     }
-
-  //     #email {
-  //       margin-right: 10px;
-  //     }
-
-  //     #linkedin {
-  //       margin-right: 10px;
-  //       color: blue;
-  //     }
-      
-  //     #github {
-  //       color: black;
-  //     }
-  //   }
-  // }
 </style>
