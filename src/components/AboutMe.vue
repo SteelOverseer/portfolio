@@ -1,7 +1,7 @@
 <template>
   <div id='aboutMe'>
     <h1>Hi, my name is Doug</h1>
-    <p>I am a full stack software engineer with {{ yearsExperience }} of experience</p>
+    <p>I am a full stack software engineer with {{ yearsExperience }} of experience in software development.</p>
   </div>
 </template>
 
