@@ -1,8 +1,16 @@
 <template>
   <v-app>
     <title-bar />
-    <v-main>
-      <router-view></router-view>
+    <v-main id='portfolioBody'>
+      <v-container class='fill-height'>
+        <v-row no-gutters class='fill-height'>
+          <v-col></v-col>
+          <v-col cols="7">
+            <router-view></router-view>
+          </v-col>
+          <v-col></v-col>
+        </v-row>
+      </v-container>
     </v-main>
       <v-footer>
         <p>
@@ -26,6 +34,17 @@ export default {
 
 <style lang="scss">
   .v-app-bar-title__content {
-    width: 200px !important;
+    width: 200px;
   }
+
+  #portfolioBody {
+    background-color: navy;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+
 </style>

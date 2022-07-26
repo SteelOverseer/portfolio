@@ -6,8 +6,13 @@
       <v-card-text>
         <p>
           <ul>
-            <li>Created proof of concept for re-writing existing projects in dotnet core.</li>
-            <li>Built a custom application for a client utilizing Apple APIs</li>
+            <li>Designed, developed and deployed custom solutions for customers.</li>
+            <li>Created or updated documentation as needed.</li>
+            <li>Participated in agile ceremonies such as stand up, planning and retro meetings.</li>
+            <li>Tested new functionality developed by other members of the team.</li>
+            <li>Mentored newer developers hired to the team.</li>
+            <li>Investigate cases that have come through support and open tickets as needed.</li>
+            <li>Helped define processes and guidelines for the team.</li>
           </ul>
         </p>
       </v-card-text>
