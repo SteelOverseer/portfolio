@@ -5,7 +5,7 @@
       <v-container class='fill-height'>
         <v-row no-gutters class='fill-height'>
           <v-col></v-col>
-          <v-col cols="7">
+          <v-col cols='18' sm='8'>
             <router-view></router-view>
           </v-col>
           <v-col></v-col>
@@ -45,6 +45,4 @@ export default {
     display: flex;
     flex-direction: row;
   }
-
-
 </style>
