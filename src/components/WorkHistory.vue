@@ -6,13 +6,14 @@
       <v-card-text>
         <p>
           <ul>
-            <li>Designed, developed and deployed custom solutions for customers.</li>
-            <li>Created or updated documentation as needed.</li>
-            <li>Participated in agile ceremonies such as stand up, planning and retro meetings.</li>
-            <li>Tested new functionality developed by other members of the team.</li>
-            <li>Mentored newer developers hired to the team.</li>
+            <li>Design, develope and deploy custom solutions for customers.</li>
+            <li>Interface with external APIs as a part of custom solutions for customer workflows.</li>
+            <li>Create or update documentation as needed.</li>
+            <li>Participate in agile ceremonies such as stand up, planning and retro meetings.</li>
+            <li>Test new functionality developed by other members of the team.</li>
+            <li>Mentor newer developers hired to the team.</li>
             <li>Investigate cases that have come through support and open tickets as needed.</li>
-            <li>Helped define processes and guidelines for the team.</li>
+            <li>Help define processes and guidelines for the team.</li>
           </ul>
         </p>
       </v-card-text>
@@ -23,10 +24,10 @@
       <v-card-text>
         <p>
           <ul>
-            <li>Implemented first proof of concept of using Vue.js and unit tests in the application.</li>
+            <li>Implemented the first proof of concept of using Vue.js and unit tests in the application.</li>
             <li>Rewrote the application’s Adobe InDesign plug-in to enhance security.</li>
-            <li>Troubleshoot and fixed bugs, working with Quality Assurance and Customer Support to make sure the intended functionality is captured.</li>
-            <li>Develop new features based on given requirements, working with the Product Manager to clarify and update requirements as needed.</li>
+            <li>Troubleshot and fixed bugs, working with Quality Assurance and Customer Support to make sure the intended functionality is captured.</li>
+            <li>Developed new features based on given requirements, working with the Product Manager to clarify and update requirements as needed.</li>
             <li>Practice Agile with two-week sprints as part of an international team.</li>
             <li>Practice SAFe methodology with six-week increments as part of an international team.</li>
           </ul>
@@ -39,10 +40,10 @@
       <v-card-text>
         <p>
           <ul>
-            <li>Validate client data based on technical requirements and provide feedback to the client.</li>
-            <li>Participate in meetings with clients to discuss data and data processes.</li>
-            <li>Troubleshoot data related issues found in implementing the data in the application.</li>
-            <li>Collaborate with other teams to keep the Technical Requirements Document up to date.</li>
+            <li>Validated client data based on technical requirements and provided feedback to the client.</li>
+            <li>Participated in meetings with clients to discuss data and data processes.</li>
+            <li>Troubleshot data related issues found in implementing the data in the application.</li>
+            <li>Collaborated with other teams to keep the Technical Requirements Document up to date.</li>
           </ul>
         </p>
       </v-card-text>
@@ -53,12 +54,12 @@
       <v-card-text>
         <p>
           <ul>
-            <li>Regression test releases before the quarterly release and report any issues to the development team. </li>
+            <li>Regression tested releases before the quarterly release and report any issues to the development team. </li>
             <li>Developed automated testing using Nightwatch.js and Selenium webdriver.</li>
-            <li>Write test plans for new features based on given requirements.</li>
-            <li>Write requirements for new features based on given business need.</li>
-            <li>Investigated bug reports and send confirmation to the development team.</li>
-            <li>Test new features and bug fixes, reporting any issues to the development team.</li>
+            <li>Wrote test plans for new features based on given requirements.</li>
+            <li>Wrote requirements for new features based on given business needs.</li>
+            <li>Investigated bug reports and created tickets for the development team.</li>
+            <li>Tested new features and bug fixes, reporting any issues to the development team.</li>
           </ul>
         </p>
       </v-card-text>
