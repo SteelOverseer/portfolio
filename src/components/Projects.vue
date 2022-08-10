@@ -38,5 +38,6 @@ export default {
 
   h1 {
     color: white;
+    margin-bottom: 10px;
   }
 </style>

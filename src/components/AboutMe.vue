@@ -28,7 +28,7 @@
               <span
                 v-bind="attrs"
                 v-on="on"
-              ><font-awesome-icon icon="fa-brands fa-linkedin" size="2xl" :style="{ color: 'blue'}" /></span>
+              ><font-awesome-icon icon="fa-brands fa-linkedin" size="2xl" :style="{ color: 'navy'}" /></span>
             </template>
             
             <span>
@@ -38,7 +38,7 @@
         </a>
       </div>
       <div class="link">
-        <a href='https://github.com/SteelOverseer/portfolio' target='_blank'>
+        <a href='https://github.com/SteelOverseer' target='_blank'>
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <span
@@ -48,6 +48,21 @@
             </template>
             <span>
               Github
+            </span>
+          </v-tooltip>
+        </a>
+      </div>
+      <div class="link">
+        <a href="/files/DouglasSchultz_Resume.pdf" download>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <span
+                v-bind="attrs"
+                v-on="on"
+              ><font-awesome-icon icon="fa-solid fa-file-arrow-down" size="2xl" :style="{ color: 'red'}" /></span>
+            </template>
+            <span>
+              Resume
             </span>
           </v-tooltip>
         </a>
@@ -76,6 +91,7 @@
     #links {
       display: flex;
       flex-direction: row;
+      margin: 10px;
 
       .link {
         display: flex;
