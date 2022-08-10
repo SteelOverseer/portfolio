@@ -2,34 +2,92 @@
   <div id='aboutMe'>
     <h1>Hi, I'm Doug</h1>
     <p>
-      I am a software engineer based out of Rochester NY.
-      <br>
-      I have a passion for writing effective and maintable code.
+      I am a software engineer with a passion for writing effective and maintable code based out of Rochester NY.
     </p>
+    <div id='links'>
+      <div class="link">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=douglasschultz1@gmail.com" target='_blank'>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <span
+                v-bind="attrs"
+                v-on="on"
+              ><font-awesome-icon icon="far fa-envelope" size="2xl" :style="{ color: 'red'}" /></span>
+            </template>
+            
+            <span>
+              E-mail
+            </span>
+          </v-tooltip>
+        </a>
+      </div>
+      <div class="link">
+        <a href="https://www.linkedin.com/in/douglas-schultz-7a9819a7/" target='_blank'>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <span
+                v-bind="attrs"
+                v-on="on"
+              ><font-awesome-icon icon="fa-brands fa-linkedin" size="2xl" :style="{ color: 'blue'}" /></span>
+            </template>
+            
+            <span>
+              LinkedIn
+            </span>
+          </v-tooltip>
+        </a>
+      </div>
+      <div class="link">
+        <a href='https://github.com/SteelOverseer/portfolio' target='_blank'>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <span
+                v-bind="attrs"
+                v-on="on"
+              ><font-awesome-icon icon="fa-brands fa-github" size="2xl" :style="{ color: 'black'}" /></span>
+            </template>
+            <span>
+              Github
+            </span>
+          </v-tooltip>
+        </a>
+      </div>
+    </div>    
   </div>
 </template>
 
 <script>
-import moment from 'moment'
-
-export default {
-  components: {  },
-  name: 'AboutMe',
-  computed: {
-    yearsExperience() {
-      return moment([2018, 9, 1]).toNow(true);
-    } 
+  export default {
+    components: {  },
+    name: 'AboutMe',
+    computed: {
+      
+    }
   }
-}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   #aboutMe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    height: 100%;
+    color: white;
+
+    #links {
+      display: flex;
+      flex-direction: row;
+
+      .link {
+        display: flex;
+        background-color: white;
+        min-width: 50px;
+        min-height: 50px;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        border-radius: 25px;
+      }  
+    }
   }
 
   p {
@@ -37,4 +95,6 @@ export default {
     text-align: center;
     margin: 10px;
   }
+
+ 
 </style>

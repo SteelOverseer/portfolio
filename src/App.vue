@@ -1,18 +1,18 @@
 <template>
   <v-app>
-    <title-bar />
     <v-main id='portfolioBody'>
       <v-container class='fill-height'>
         <v-row no-gutters class='fill-height'>
           <v-col></v-col>
           <v-col cols='18' sm='8'>
-            <router-view></router-view>
+            <about-me/>
+            <projects/>
           </v-col>
           <v-col></v-col>
         </v-row>
       </v-container>
     </v-main>
-      <v-footer>
+      <v-footer dark>
         <p>
           Favicon made by <a href="" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon" target='_blank'>www.flaticon.com</a>
         </p>
@@ -21,13 +21,15 @@
 </template>
 
 <script>
-import TitleBar from './components/TitleBar.vue'
+import AboutMe from './components/AboutMe.vue'
+import Projects from './components/Projects.vue'
 
 export default {
   name: 'App',
 
   components: {
-    TitleBar,
+    AboutMe,
+    Projects
   },
 };
 </script>
@@ -38,7 +40,7 @@ export default {
   }
 
   #portfolioBody {
-    background-color: navy;
+    background-color:#121212;
   }
 
   .container {
