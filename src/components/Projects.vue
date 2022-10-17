@@ -13,6 +13,18 @@
         </p>
       </v-card-text>
     </v-card>
+    <v-card elevation='2'>
+      <v-card-title>MTG Missing Card Finder</v-card-title>
+      <v-card-subtitle>
+        Written with: <font-awesome-icon icon="fa-brands fa-rust" size="xl" :style="{ color: 'orange'}" />
+      </v-card-subtitle>
+      <v-card-text>
+        <p>
+          This was a project to learn rust. It was meant to read decklists and create a list and count of cards used in decks and then compare the result to a collection file.
+          This would tell me what cards are used in decks that are not tracked in the collection.
+        </p>
+      </v-card-text>
+    </v-card>
   </div>
 </template>
 

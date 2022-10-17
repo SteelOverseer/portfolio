@@ -4,11 +4,11 @@ import vuetify from './plugins/vuetify'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faPython, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faPython, faLinkedin, faGithub, faRust } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faPython, faEnvelope, faLinkedin, faGithub, faFileArrowDown)
+library.add(faPython, faEnvelope, faLinkedin, faGithub, faFileArrowDown, faRust)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
