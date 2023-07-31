@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <div class="card-container" :class="{ flip: flipped}">
+    <div class="card-container" :class="{ flip: flipped }">
       <v-card class="modern-gradient magic-card card-front">
         <v-card-title class="title">
           <div>
@@ -9,9 +9,9 @@
           <div id='links'>
             <div class="link" :style="{'background-color': '#68c3f7'}">
               <a href="https://www.linkedin.com/in/douglas-schultz-7a9819a7/" target='_blank'>
-                <v-tooltip bottom>
-                  <template v-slot:activator="{ on, attrs }">
-                    <span v-bind="attrs" v-on="on">
+                <v-tooltip location="bottom" text="LinkedIn">
+                  <template v-slot:activator="{ props }">
+                    <span v-bind="props">
                       <font-awesome-icon 
                         icon="fa-brands fa-linkedin" 
                         size="xl" 
@@ -19,17 +19,14 @@
                       />
                     </span>
                   </template>
-                  <span>
-                    LinkedIn
-                  </span>
                 </v-tooltip>
               </a>
             </div>
             <div class="link" :style="{'background-color': 'grey'}">
               <a href='https://github.com/SteelOverseer' target='_blank'>
-                <v-tooltip bottom>
-                  <template v-slot:activator="{ on, attrs }">
-                    <span v-bind="attrs" v-on="on">
+                <v-tooltip location="bottom" text="GitHub">
+                  <template v-slot:activator="{ props }">
+                    <span v-bind="props">
                       <font-awesome-icon 
                         icon="fa-brands fa-github" 
                         size="xl" 
@@ -37,17 +34,14 @@
                       />
                     </span>
                   </template>
-                  <span>
-                    Github
-                  </span>
                 </v-tooltip>
               </a>
             </div>
             <div class="link" :style="{'background-color': 'red'}">
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=douglasschultz1@gmail.com" target='_blank'>
-                <v-tooltip bottom>
-                  <template v-slot:activator="{ on, attrs }">
-                    <span v-bind="attrs" v-on="on">
+                <v-tooltip location="bottom" text="E-mail">
+                  <template v-slot:activator="{ props }">
+                    <span v-bind="props">
                       <font-awesome-icon 
                         icon="far fa-envelope" 
                         size="xl" 
@@ -55,9 +49,6 @@
                       />
                     </span>
                   </template>
-                  <span>
-                    E-mail
-                  </span>
                 </v-tooltip>
               </a>
             </div>
@@ -97,7 +88,7 @@
           </div>
         </v-card-title>
         <div id="my-picture-back" class="mx-auto">
-          <v-img src="/files/MeAndCats.png" height="500px"/>
+          <v-img src="/files/MeAndChiChi_Edited.jpg" height="500px"/>
         </div>
         <v-card-subtitle class="subtitle">Legendary Planeswalker - Doug</v-card-subtitle>
         <v-card-text class="text-box mx-auto">
@@ -156,37 +147,40 @@
         </div>
       </v-card>
     </div>
-    <!-- <v-img src="/files/rocky.png" height="500px"/> -->
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'CardFront',
-    data() {
-      return {
-        flipped: false,
-        loyalty: 2,
-        chiChiSummoned: false,
-        rockySummoned: false
-      }
-    },
-    methods: {
-      flipCard() {
-        this.flipped = !this.flipped
-        
-        setTimeout(() => {
-          this.loyalty = 2;
-        }, 1000)
-      },
-      summonChiChi() {
-        this.loyalty++;
-      },
-      summonRocky() {
-        this.loyalty++;
-      }
-    }
+<script setup>
+  import { ref } from 'vue'
+
+  let flipped = ref(false);
+  let loyalty = ref(2);
+  let chiChiSummoned = false;
+  let rockySummoned = false;
+  const emit= defineEmits(["summonRocky", "summonChiChi"])
+
+  const flipCard = () => {
+    flipped.value = !flipped.value
+    
+    setTimeout(() => {
+      loyalty.value = 2;
+    }, 1000)
   }
+
+  function summonChiChi() {
+    if(!chiChiSummoned) {
+      emit("summonChiChi", true);
+    }
+    loyalty.value++;
+  }
+
+  function summonRocky() {
+    if(!rockySummoned) {
+      emit("summonRocky", true);
+    }
+    loyalty.value++;
+  }
+    
 </script>
 
 <style lang="scss" scoped>
@@ -217,16 +211,19 @@
     max-height: 50px;
     margin: 5px;
     border-radius: 10px;
+    font-weight: bold;
   }
   .subtitle {
     color: black !important;
+    opacity: 1;
+    height: 35px;
   }
 
   #my-picture-front, #my-picture-back {
     border: 2px solid black;
     width: 98%;
     height: 505px;
-    background-color: grey;
+    background-color: silver;
   }
 
   .text-box {
