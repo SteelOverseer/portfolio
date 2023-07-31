@@ -1,20 +1,26 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import './style.css'
 import App from './App.vue'
-import vuetify from './plugins/vuetify'
+
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faPython, faLinkedin, faGithub, faRust } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faFileArrowDown, faCircle, faShield } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faPython, faEnvelope, faLinkedin, faGithub, faFileArrowDown, faRust)
+library.add(faPython, faEnvelope, faLinkedin, faGithub, faFileArrowDown, faRust, faCircle, faShield)
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+const vuetify = createVuetify({
+  components,
+  directives,
+})
 
-Vue.config.productionTip = false
-
-new Vue({
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+createApp(App)
+    .component('font-awesome-icon', FontAwesomeIcon)
+    .use(vuetify)
+    .mount('#app')
