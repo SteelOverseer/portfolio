@@ -63,7 +63,7 @@
             Doug Schultz, Software Engineer's power is equal to the number of cups of coffee he has consumed.
           </v-row>
           <v-row no-gutters class="rules-text">
-            <span @click="flipCard">
+            <span @click="flipCard" style="cursor: pointer;">
               <span class="fa-layers fa-fw" style="width: 2.25em;">
                 <font-awesome-icon 
                   icon="fas fa-circle" 
@@ -92,7 +92,7 @@
         </div>
         <v-card-subtitle class="subtitle">Legendary Planeswalker - Doug</v-card-subtitle>
         <v-card-text class="text-box mx-auto">
-          <v-row no-gutters class="rules-text" @click="flipCard">
+          <v-row no-gutters class="rules-text" @click="flipCard" style="cursor: pointer;">
             <v-col class="symbol-column">
               <span class="fa-layers fa-fw" style="width: 2.25em;">
                 <font-awesome-icon 
@@ -106,7 +106,7 @@
             </v-col> 
             <v-col class="action-column">Exile Doug, Cat Dad, then return him to the battlefield transformed under his owner's control.</v-col>
           </v-row>
-          <v-row no-gutters class="rules-text" @click="summonRocky">
+          <v-row no-gutters class="rules-text" @click="summonRocky" style="cursor: pointer;">
             <v-col class="symbol-column">
               <span class="fa-layers fa-fw" style="width: 2.25em;">
                 <font-awesome-icon 
@@ -120,7 +120,7 @@
             </v-col> 
             <v-col class="action-column">Create "Rocky, Chaos Incarnate" a legendary 2/1 white Cat creature token.</v-col>
           </v-row>
-          <v-row no-gutters class="rules-text" @click="summonChiChi">
+          <v-row no-gutters class="rules-text" @click="summonChiChi" style="cursor: pointer;">
             <v-col class="symbol-column">
               <span class="fa-layers fa-fw" style="width: 2.25em;">
                 <font-awesome-icon 
